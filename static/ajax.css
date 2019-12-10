@@ -1,0 +1,16 @@
+body{
+    background-color:black;
+}
+
+.pokeball{
+    width:150px;
+    height:150px;
+    display:inline-block;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+#poke0 {
+    display:none;
+}
+
