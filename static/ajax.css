@@ -1,16 +1,170 @@
-body{
-    background-color:black;
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+@font-face {
+  font-family: "Pokemon";
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon")
+      format("svg");
 }
 
-.pokeball{
-    width:150px;
-    height:150px;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Pokemon";
+}
+html{
+    width:100vw;
+}
+body {
+  background-color: black;
+  max-width: 100vw;
+  width:100%;
+}
+
+.toolbar {
+  width: 100%;
+  height: 10vh;
+  padding: 0.1em;
+  background-color: red;
+  position: fixed;
+  z-index: 2;
+
+}
+.toolbar_space {
+  width: 100%;
+  height: 16vh;
+  background-color: black;
+}
+
+.header_text {
+  color: white;
+  font-size: 25pt;
+  text-decoration: underline;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.button_container {
+  width: 28%;
+  height: 90%;
+  display: inline-block;
+}
+
+.form_container{
+    margin-left:10%;
+    width:28%;
+    height:90%;
     display:inline-block;
-    background-size:cover;
-    background-repeat:no-repeat;
+}
+
+.pokeball {
+  width: 125px;
+  height: 125px;
+  display: inline-block;
+  text-align: center;
+}
+
+.pokename {
+  width: 100%;
+  height: 10%;
+  color: white;
+  white-space: nowrap;
+}
+
+.pokehome {
+  width: 100%;
+  height: 82%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 0.65rem white);
 }
 
 #poke0 {
-    display:none;
+  display: none;
 }
 
+
+.pokemonInfo{
+    font-size:25pt;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.button {
+  display: none;
+  width: 100px;
+  height: 25px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-size: 12pt;
+  text-align:center;
+}
+
+.box {
+  padding: 1em;
+  margin: 1em;
+  width: 40%;
+  height: 70vh;
+  display: none;
+  color: white;
+  border: 1px solid black;
+  vertical-align: top;
+}
+
+/* Portrait */
+
+.large_pic {
+  width: 100%;
+  height: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  animation: pulse 1s infinite;
+  animation-direction: alternate;
+}
+.photo_row {
+  margin-top: 5%;
+  padding: 3%;
+  height: 20%;
+  width: 100%;
+}
+.mini_pic {
+  height: 90%;
+  width: 28%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+}
+
+.shiny_version {
+  width: 45%;
+  height: 90%;
+  display: inline-block;
+  vertical-align: top;
+  color: slategray;
+  font-size: 22pt;
+  text-align: center; 
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 1em #ca9f3e);
+  }
+  33% {
+    filter: drop-shadow(0 0 1.2em #ca9f3e);
+  }
+  66% {
+    filter: drop-shadow(0 0 1.9em #ca9f3e);
+  }
+  100% {
+    filter: drop-shadow(0 0 2.2em #ca9f3e);
+  }
+}

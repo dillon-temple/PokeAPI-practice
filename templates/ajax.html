@@ -1,15 +1,47 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ajax</title>
+    <title>Ajax Pokemon</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ajax.css')}}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='ajax.js')}}"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <div class="pokeball" id="poke0"></div>
+    <div class="toolbar">
+        <div class="button_container">
+            <div class="button">Go Back</div>
+        </div>        
+
+        <div class="header_text">Pokemon Ajax</div>
+        <div class="form_container">
+            <label>Number of Pokemon:</label>
+            <input type="text" id="pokeAmount" min="1" max="807" placeholder="Max:807">
+            <button type="button" id="pokeButton">Go</button>
+        </div>
+
+    </div>
+
+    <div class="toolbar_space"></div>
+
+    <div class="pokeanchor" id="poke0"></div>
+    <div class="seperation_line"></div>
+
+    <div class="Portrait box">
+        <div class="large_pic"></div>
+        <div class="photo_row">
+            <div class="mini_pic"></div>
+            <div class="shiny_version">Click for Shiny Version!</div>
+        </div>
+    </div>
+    <div class="Information box">
+        <ul class=pokemonInfo>
+        </ul>
+    </div>
+
+    <script src="/static/ajax.js" type=text/javascript></script>
 </body>
 </html>
